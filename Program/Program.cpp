@@ -1,151 +1,86 @@
 ﻿#include <iostream>
 
+#define SIZE 5
+
 using namespace std;
 
 template<typename T>
-class SingleLinkedList 
+class Stack
 {
 private:
     int size;
-
-    struct Node
-    {
-        T data;
-        Node* next;
-
-    };
-
-    Node* head;
+    int top;
+    T container[SIZE];
 public:
-    SingleLinkedList()
+    Stack()
     {
+        top = -1;
         size = 0;
-        head = nullptr;
-    }
-
-    void push_front(T data)
-    {
-        Node* newNode = new Node;
-        if (head == nullptr)
+        for (int i = 0; i < SIZE; i++)
         {
-            head = newNode;
-
-            newNode->data = data;
-            newNode->next = nullptr;
+            container[i] = NULL;
+        }
+    }
+    void push(T data)
+    {
+        if (top >= SIZE - 1)
+        {
+            cout << "Stack Overflow" << endl;
         }
         else
         {
-            newNode->data = data;
-            newNode->next = head;
-            
-            head = newNode;
+            container[++top] = data;
         }
-        size++;
     }
-
-    void push_back(T data)
+    bool Empty()
     {
-        Node* newNode = new Node;
-        if (head == nullptr)
+        if (top <= -1)
         {
-            head = newNode;
-
-            newNode->data = data;
-            newNode->next = nullptr;
+            return true;
         }
         else
         {
-            Node* currentNode = head;
-
-            while (currentNode->next != nullptr)
-            {
-                currentNode = currentNode->next;
-            }
-
-            currentNode->next = newNode;
-
-            newNode->data = data; 
-            newNode->next = nullptr;
+            return false;
         }
-        size++;
-        
     }
-
-    void pop_front()
+    void pop()
     {
-        if (head == nullptr)
+        if (Empty())
         {
-            cout << "Linked List is empty" << endl;
+            cout << "Stack is Empty" << endl;
         }
         else
         {
-            Node* deleteNode = head;
-
-            head = deleteNode->next;
-           
-            delete deleteNode;
-
-            size--;
+            top--;
         }
     }
-
-    void show()
+    const int& Size()
     {
-        Node* currentNode = head;
+        size = top + 1;
 
-        while (currentNode != nullptr)
-        {
-            cout << currentNode->data << " ";
-
-            currentNode = currentNode->next;
-        }
+        return size;
     }
-
-    void pop_back()
+    const T& Top()
     {
-        if (head == nullptr)
-        {
-            cout << "Linked List is empty" << endl; 
-        }
-        else
-        {
-            Node* deleteNode = head;
-            Node* previousNode = nullptr;
-
-            while (deleteNode->next != nullptr)
-            {
-                previousNode = deleteNode;
-
-                deleteNode = deleteNode->next;
-            }
-            delete deleteNode;
-
-            previousNode->next = nullptr;
-            
-
-            size--;
-        }
-
+        return container[top];
     }
 };
 
 int main()
 {
-    SingleLinkedList<int> singleLinkedList;
+    Stack<int> stack;
 
-    singleLinkedList.push_front(10);
-    singleLinkedList.push_front(20);
-    singleLinkedList.push_back(5);
-    singleLinkedList.push_back(10);
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+    stack.push(40);
+    stack.push(50);
 
-    singleLinkedList.pop_back();
-    singleLinkedList.pop_back();
-    singleLinkedList.pop_back();
-    singleLinkedList.pop_back();
-    singleLinkedList.pop_back();
-    singleLinkedList.pop_back();
+    while (stack.Empty() == false)
+    {
+        cout << stack.Top() << endl;
 
-    singleLinkedList.show();
-
+        stack.pop();
+    }
     return 0;
 }
