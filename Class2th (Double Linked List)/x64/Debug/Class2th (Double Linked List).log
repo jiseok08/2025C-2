@@ -1,0 +1,22 @@
+﻿  Class2th (Double Linked List).cpp
+C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(138,17): error C2365: 'DoubleLinkedList<T>::size': 재정의: 이전 정의는 '데이터 멤버'입니다.
+      C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(19,9):
+      'DoubleLinkedList<T>::size' 선언을 참조하십시오.
+      C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(138,17):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(6,7):
+          클래스 템플릿 'DoubleLinkedList'을(를) 컴파일하는 동안
+  
+C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(140,9): error C2059: 구문 오류: 'return'
+C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(140,20): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(142,5): error C2143: 구문 오류: ';'이(가) '~' 앞에 없습니다.
+C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(138,17): error C2207: 'DoubleLinkedList<T>::size': 클래스 템플릿의 멤버는 함수 형식을 가져올 수 없습니다.
+      C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(138,17):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(154,27):
+          컴파일되는 클래스 템플릿 인스턴스화 'DoubleLinkedList<int>'에 대한 참조를 확인하세요.
+  
+C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(138,17): error C2365: 'DoubleLinkedList<int>::size': 재정의: 이전 정의는 '데이터 멤버'입니다.
+      C:\Users\허봉식\Desktop\2025C-2\Class2th (Double Linked List)\Class2th (Double Linked List).cpp(19,9):
+      'DoubleLinkedList<int>::size' 선언을 참조하십시오.
+  
