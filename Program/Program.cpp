@@ -5,25 +5,34 @@
 using namespace std;
 
 template<typename T>
-class CircleQueue
+class Vector
 {
 private:
-	int front;
-	int rear;
+	int size;
+	T capacity;
 
-	T container[SIZE];
+	T* container;
 public:
-	CircleQueue()
+	Vector()
 	{
-		front = -1;
-		rear = -1;
-
-		for (int i = 0; i < SIZE; i++)
-		{
-			container[i] = NULL;
-		}
+		size = 0;
+		capacity = 0;
+		container = nullptr;
 	}
+	void push_back()
+	{
 
+	}
+	void resize(int newSize)
+	{
+		Vector* newContainer = capacity;
+
+		size = newSize;
+
+		container = NULL;
+
+		delete container;
+	}
 };
 
 int main()
