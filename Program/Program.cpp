@@ -1,103 +1,84 @@
 ﻿#include <iostream>
 
-#define SIZE 4
-
 using namespace std;
 
-template<typename T>
-class Vector
+class String
 {
 private:
 	int size;
-	T capacity;
 
-	T* container;
+	char* pointer;
 public:
-	Vector()
+	String()
 	{
 		size = 0;
-		capacity = 0;
-		container = nullptr;
+		pointer = nullptr;
 	}
-	void resize(int newSize)
+	void operator = (const char * word)
 	{
-		capacity = newSize; // 1. capacity 값 저장
+		size = strlen(word) + 1;
 
-		T * newContainer = new T[capacity]; // 2. 포인터 변수 생성
+		if (pointer == nullptr)
+		{
+			pointer = new char[size];
 
-		for (int i = 0; i < capacity; i++)
-		{
-			newContainer[i] = NULL; // 3. 메모리 공간 초기화
-		}
-		for (int i = 0; i < size; i++)
-		{
-			newContainer[i] = container[i]; // 4. 기존 배열을 복사
-		}
-
-		if (container != nullptr)
-		{
-			delete[] container; // 5. 기존 배열 메모리 해제
-		}
-
-		container = newContainer; // 6. 배열 주소 변경
-	}
-	void push_back(T data)
-	{
-		if (capacity <= 0)
-		{
-			resize(1);
-		}
-		else if (size >= capacity)
-		{
-			resize(capacity * 2);
-		}
-
-		container[size++] = data;
-	}
-	void pop_back()
-	{
-		if (size <= 0)
-		{
-			cout << "Vector is empty" << endl;
+			for (int i = 0; i < size; i++)
+			{
+				pointer[i] = word[i];
+			}
 		}
 		else
 		{
-			container[--size] = 0;
+			char* newpointer = new char[size];
+
+			for (int i = 0; i < size; i++)
+			{
+				newpointer[i] = word[i];
+			}
+
+			delete [ ] pointer;
+
+			pointer = newpointer;
 		}
 	}
-	const int &Size()
+	const int& Size()
 	{
-		return size;	
+		return size - 1;
 	}
-	const T& operator [] (const int& index)
+	const char& operator [ ] (const int& index)
 	{
-		return container[index];
+		return pointer[index];
 	}
-	~Vector()
+	~String()
 	{
-		if (container != nullptr)
+		if (pointer != nullptr)
 		{
-			delete[] container;
+			delete[] pointer;
 		}
 	}
 };
 
 int main()
 {
-	Vector<int> vector;
+	String string;
 
-	vector.push_back(10);
-	vector.push_back(20);
-	vector.push_back(30);
-	vector.push_back(40);
-	vector.push_back(50);
+	string = "Key";
 
-	vector.pop_back();
-
-	for (int i = 0; i < vector.Size(); i++)
+	for (int i = 0; i < string.Size(); i++)
 	{
-		cout << vector[i] << " ";
+		cout << string[i];
 	}
+
+	cout << endl;
+
+	string = "Apple";
+
+	for (int i = 0; i < string.Size(); i++)
+	{
+		cout << string[i];
+	}
+
+	cout << endl;
 
 	return 0;
 }
