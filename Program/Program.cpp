@@ -14,6 +14,7 @@ public:
 		size = 0;
 		pointer = nullptr;
 	}
+
 	void operator = (const char * word)
 	{
 		size = strlen(word) + 1;
@@ -41,14 +42,54 @@ public:
 			pointer = newpointer;
 		}
 	}
+
 	const int& Size()
 	{
 		return size - 1;
 	}
+
 	const char& operator [ ] (const int& index)
 	{
 		return pointer[index];
 	}
+
+	void Append(const char* word)
+	{
+		int resize = size;
+
+		size = size + strlen(word ) + 1;
+
+		char* newpointer = new char[size];
+
+		for (int i = 0; i < resize; i++)
+		{
+			newpointer[i] = pointer[i];
+		}
+		
+		for (int i = 0; i < strlen(word) + 1; i++)
+		{
+			newpointer[strlen(pointer) + i] = word[i];
+		}
+
+		if (pointer != nullptr)
+		{
+			delete[] pointer;
+		}
+
+		pointer = newpointer;
+		
+	}
+
+	long long Find(const char* word)
+	{
+		int count = 0;
+
+		for (int i = 0; i < size; i++)
+		{
+			
+		}
+	}
+
 	~String()
 	{
 		if (pointer != nullptr)
@@ -60,25 +101,40 @@ public:
 
 int main()
 {
-	String string;
+	// String string;
+	// 
+	// string = "Key";
+	// 
+	// for (int i = 0; i < string.Size(); i++)
+	// {
+	// 	cout << string[i];
+	// }
+	// 
+	// cout << endl;
+	// 
+	// string = "apple";
+	// 
+	// for (int i = 0; i < string.Size(); i++)
+	// {
+	// 	cout << string[i];
+	// }
+	// 
+	// cout << endl;
+	// 
+	// string.Append(" Four");
+	// string.Append(" x");
+	// 
+	// for (int i = 0; i < string.Size(); i++)
+	// {
+	// 	cout << string[i];
+	// }
+	// cout << endl;
 
-	string = "Key";
+	std::string name;
 
-	for (int i = 0; i < string.Size(); i++)
-	{
-		cout << string[i];
-	}
+	name = "AlistarAl";
 
-	cout << endl;
-
-	string = "Apple";
-
-	for (int i = 0; i < string.Size(); i++)
-	{
-		cout << string[i];
-	}
-
-	cout << endl;
+	cout << name.find("Al");
 
 	return 0;
 }
