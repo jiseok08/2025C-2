@@ -5,12 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{84BCB8B9-26B1-4F1A-A5A4-10E7933BAD28}|Program.vcxproj|C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\2025C-2\\Program\\Program.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{84BCB8B9-26B1-4F1A-A5A4-10E7933BAD28}|Program.vcxproj|solutionrelative:Program.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{933BAA14-B64D-41CA-89E7-F97601C38A1C}|..\\Class9th (Hash Table)\\Class9th (Hash Table).vcxproj|C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\2025C-2\\Class9th (Hash Table)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DB26C1F-F3F1-43F0-A9A1-2D2916D34762}|..\\Class2th (Double Linked List)\\Class2th (Double Linked List).vcxproj|C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\2025C-2\\Class2th (Double Linked List)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,36 +24,10 @@
               "RelativeDocumentMoniker": "Program.cpp",
               "ToolTip": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\2025C-2\\Program\\Program.cpp",
               "RelativeToolTip": "Program.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAwHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-13T09:09:33.733Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Source.cpp",
-              "DocumentMoniker": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\2025C-2\\Class9th (Hash Table)\\Source.cpp",
-              "RelativeDocumentMoniker": "..\\Class9th (Hash Table)\\Source.cpp",
-              "ToolTip": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\2025C-2\\Class9th (Hash Table)\\Source.cpp",
-              "RelativeToolTip": "..\\Class9th (Hash Table)\\Source.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T10:16:25.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Source.cpp",
-              "DocumentMoniker": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\2025C-2\\Class2th (Double Linked List)\\Source.cpp",
-              "RelativeDocumentMoniker": "..\\Class2th (Double Linked List)\\Source.cpp",
-              "ToolTip": "C:\\Users\\\uD5C8\uBD09\uC2DD\\Desktop\\2025C-2\\Class2th (Double Linked List)\\Source.cpp",
-              "RelativeToolTip": "..\\Class2th (Double Linked List)\\Source.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-03T09:45:57.043Z",
               "EditorCaption": ""
             }
           ]
