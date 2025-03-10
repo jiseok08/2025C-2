@@ -28,10 +28,32 @@ public:
     }
     void push(T data)
     {
-
+        if (size >= SIZE)
+        {
+            cout << "Adjacency Matrix Overflow" << endl;
+        }
+        else
+        {
+            vertex[size++] = data;
+        }
     }
 
     void edge(int i, int j)
+    {
+        if (size <= 0)
+        {
+            cout << "Ajancency Matrix is Empty" << endl;
+        }
+        else if (i >= size || j >= size)
+        {
+            cout << "Index Out of Range" << endl;
+        }
+        else
+        {
+            matrix[i][j] = 1;
+            matrix[j][i] = 1;
+        }
+    }
  
 };
 
